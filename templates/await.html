@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<main>
+    Await
+    <form action="/await" method="POST">
+        {% csrf_token %}
+        <input type="text" value="payment" style="display: none;" name="mode">
+        <button class="btn btn-primary">Proceed</button>
+    </form>
+</main>
+{% endblock body %}
